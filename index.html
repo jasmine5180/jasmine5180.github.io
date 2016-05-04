@@ -1,11 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<title>홈페이지</title>
+	<title>ssgpay</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="src/jquery.js"></script>
+	<script src="src/jquery.arbitrary-anchor.js"></script>
+	<script src="src/slides.1.2.js"></script>
+	<script src="src/jquery.transform2d.js"></script>
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="css/ie.css">
+		<script src="src/html5shiv.js"></script>
+	<![endif]-->
 </head>
 <body>
-	<h1>준용이 홈페이지</h1>
-	<img src="images/thumb1.jpg" alt="">
+	<header>
+		<h1 class="logo"><a href="#" class="ir">SSGPAY</a></h1>
+		<ul class="gnb">
+			<li><a href="#.service">서비스 소개</a></li>
+			<li><a href="#.using">이용안내</a></li>
+			<li><a href="#.download">앱다운로드</a></li>
+			<li><a href="#.affiliate">가맹점 안내</a></li>
+			<li><a href="#.media">브랜드 미디어</a></li>
+			<li><a href="#.event">이벤트<span class="new ir">new</span></a></li>
+		</ul>
+	</header>
+	<div class="wrap">
+		<div class="contents">
+			<div class="ssppay_content service">
+				<div id="ssgpaySlider">
+					<div class="slides_container">
+						<div class="ssg_slide slide_a">
+							<div class="bg"></div>
+						</div>
+						<div class="ssg_slide slide_b">
+							<div class="bg"></div>
+							<img src="images/img_main5_1.png" alt="" class="phone b_phone">
+						</div>
+						<div class="ssg_slide slide_c">
+							<div class="bg"></div>
+							<img src="images/img_main5_1.png" alt="" class="phone b_phone">
+						</div>
+						<div class="ssg_slide slide_d">
+							<div class="bg"></div>
+						</div>
+						<div class="ssg_slide slide_e">
+							<div class="bg"></div>
+						</div>
+						<div class="ssg_slide slide_f">
+							<div class="bg"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ssgpay_content using">이용안내</div>
+			<div class="ssgpay_content download">앱다운로드</div>
+			<div class="ssgpay_content affiliate">가맹점안내</div>
+			<div class="ssgpay_content media">브랜드미디어</div>
+			<div class="ssgpay_content event">이벤트</div>
+		</div>
+		<div class="footer"></div>
+	</div>
+	<script>
+	jQuery(function($){
+		var $c1=$('#ssgpaySlider .slides_container');
+		var $c2=$('#ssgpaySlider .slides_container div.ssg_slide');
+		$(window).on('load resize',function(){
+			w1=$(window).width()-130;
+			h1=$(window).height();
+			$c1.width(w1).height(h1);
+			$c2.width(w1).height(h1);
+		})
+
+		$(window).on('load',function(){
+			$('#ssgpaySlider').slides({
+				play:3000,
+				animationStart:function(){
+					$('.phone.b_phone').css({top:100,opacity:0});
+					$('#ssgpaySlider .bg').css({transform:'scale(1,1)'})
+				},
+				animationComplete:function(index){
+					idx=index-1;
+					
+					if(index==2){
+						$('.phone.b_phone').animate({top:50,opacity:1},function(){
+							$(this).prev().animate({
+								transform:'scale(1.1,1.1)'
+							})
+						})
+					}
+					
+				}
+			});
+
+			$('#ssgpaySlider div.ssg_slide .bg').eq(0).animate({
+						transform:'scale(1.1,1.1)'
+					})	
+		})
+	})
+	</script>
 </body>
 </html>
