@@ -1,0 +1,44 @@
+/* reset */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+ol, ul {list-style: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+
+/* common */
+html,body{height: 100%;}
+.clearfix:after{display: block;clear: both;content: '';}
+.ir{display: block;text-indent: -9999px;}
+
+/* layout */
+header{position: fixed;width: 130px;height: 100%;background-color: #fff;z-index: 20;}
+.wrap{position: relative;z-index: 10;margin-left:130px;}
+.ssgpay_content {height:600px;}
+.footer{border: 1px solid #f2f2f2;height: 400px;background-color: #fff;}
+
+/* custom */
+.download{}
+/* ssgpaySlider */
+#ssgpaySlider{}
+#ssgpaySlider .slides_container{min-height:560px}
+#ssgpaySlider .slides_container div.ssg_slide{min-height:560px}
+#ssgpaySlider .slides_container div.ssg_slide{background-color: orange;font-size: 160px;}
+#ssgpaySlider .slides_container div.ssg_slide .bg{width: 100%;height: 100%;background-position: center center;background-repeat:no-repeat;-webkit-background-size: cover;background-size: cover;}
+#ssgpaySlider .slides_container div.ssg_slide.slide_a .bg{background-image:url(../images/bg_intro2.jpg)}
+#ssgpaySlider .slides_container div.ssg_slide.slide_b .bg{background-image:url(../images/bg_intro5.jpg)}
+#ssgpaySlider .slides_container div.ssg_slide.slide_c .bg{background-image:url(../images/bg_intro6.jpg)}
+#ssgpaySlider .slides_container div.ssg_slide.slide_d .bg{background-image:url(../images/bg_intro7.jpg)}
+#ssgpaySlider .slides_container div.ssg_slide.slide_e .bg{background-image:url(../images/bg_intro4.jpg)}
+#ssgpaySlider .slides_container div.ssg_slide.slide_f .bg{background-image:url(../images/bg_intro8.jpg)}
+#ssgpaySlider .pagination {position: absolute;top:580px;left: 50%;margin-left: -480px;z-index: 100;}
+#ssgpaySlider .pagination:after{display: block;clear: both;content: '';}
+#ssgpaySlider .pagination li{float: left;padding: 5px;}
+#ssgpaySlider .pagination li a{display: block;height:3px ;background-color: #fff;width:150px;text-indent: -9999px;}
+#ssgpaySlider .pagination li.current a{background-color: #ff4b33;}
+
+div.ssg_slide .phone{position: absolute;top:100px;left: 100px;z-index: 10;opacity: 0;}
+/* logo*/
+.logo{}
+.logo a{width: 86px;height: 19px;background-image: url(../images/top_logo.png);margin:100px auto 150px;}
+/* gnb */
+.gnb a{position: relative;display: block;padding:0.7em 0;color: #333;font-weight: bold;text-align:center;text-decoration: none;font-size: 12px;}
+.gnb a .new{position: absolute;top:9px;left: 50%;margin-left: 20px;width: 13px;height: 13px;background:url(../images/ico.png) -10px -38px no-repeat;}
